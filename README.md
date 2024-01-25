@@ -1,4 +1,4 @@
-# ManifestCheck
+# Manifest Check
 A simple example of checking a manifest using a schema and Azure OpenAI  
 
 _Please note all provided manifests and schemas are examples only and do not follow any standards._
@@ -62,3 +62,6 @@ Database:
     version: "12.0"
     size: 128
 ```
+
+## Example Output
+![An example set of input and output](docs/example.png)
