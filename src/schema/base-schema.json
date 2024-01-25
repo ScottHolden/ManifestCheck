@@ -1,0 +1,16 @@
+{
+    "$id": "http://example.com/schemas/base-schema.json#",
+    "type": "object",
+    "additionalProperties": {
+        "type": "object",
+        "discriminator": { "propertyName": "kind"},
+        "oneOf": [
+            {
+                "$ref": "http://example.com/schemas/vm-0.0.1-schema.json#/definitions/vm-0.0.1"
+            },
+            {
+                "$ref": "http://example.com/schemas/sqldb-0.0.1-schema.json#/definitions/sqldb-0.0.1"
+            }
+        ]
+    }
+}

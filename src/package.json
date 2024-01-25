@@ -1,0 +1,15 @@
+{
+  "name": "manifestcheck",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "ScottHolden",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/openai": "^1.0.0-beta.10",
+    "ajv": "^8.12.0",
+    "dotenv": "^16.4.1",
+    "js-yaml": "^4.1.0"
+  }
+}

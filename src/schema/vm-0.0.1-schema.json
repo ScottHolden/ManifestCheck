@@ -1,0 +1,53 @@
+{
+    "$id": "http://example.com/schemas/vm-0.0.1-schema.json#",
+    "definitions": {
+        "vm-0.0.1": {
+            "type": "object",
+            "properties": {
+                "kind": {
+                    "type": "string",
+                    "enum": [
+                        "VM/0.0.1"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 98
+                },
+                "location": {
+                    "type": "string"
+                },
+                "spec": {
+                    "type": "object",
+                    "properties": {
+                        "os": {
+                            "type": "string"
+                        },
+                        "vcpu": {
+                            "type": "integer"
+                        },
+                        "memory": {
+                            "type": "integer"
+                        },
+                        "disk": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "os",
+                        "vcpu",
+                        "memory",
+                        "disk"
+                    ]
+                }
+            },
+            "required": [
+                "kind",
+                "name",
+                "location",
+                "spec"
+            ]
+        }
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "$id": "http://example.com/schemas/sqldb-0.0.1-schema.json#",
+    "definitions": {
+        "sqldb-0.0.1": {
+            "type": "object",
+            "properties": {
+                "kind": {
+                    "type": "string",
+                    "enum": [
+                        "SQLDB/0.0.1"
+                    ]
+                },
+                "name": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 98
+                },
+                "location": {
+                    "type": "string"
+                },
+                "spec": {
+                    "type": "object",
+                    "properties": {
+                        "version": {
+                            "type": "string"
+                        },
+                        "size": {
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "version",
+                        "size"
+                    ]
+                }
+            },
+            "required": [
+                "kind",
+                "name",
+                "location",
+                "spec"
+            ]
+        }
+    }
+}

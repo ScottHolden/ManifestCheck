@@ -1,0 +1,32 @@
+FrontEnd:
+  kind: VM/0.0.1
+  name: Application Front End
+  location: Azure/Sub1/Rg1/AustraliaEast
+  spec:
+    os: Windows/Generic
+    vcpu: 4
+    memory: 16
+    disk: 128
+  dependencies:
+  - BackEnd
+  - //vm219209
+BackEnd:
+  kind: VM/0.0.1
+  name: Application Front End
+  location: Azure/Sub1/Rg1/AustraliaEast
+  spec:
+    os: Linux/Generic
+    vcpu: 4
+    disk: 128
+    #memory: 16
+Database:
+  kind: SQLDB/0.0.1
+  name: Database
+  location: Azure/Sub1/Rg1/AustraliaEast
+  spec:
+    version: "12.0"
+    size: 128
+# Redis:
+#  kind: Redis/0.0.1
+#  name: Redis
+#  location: Azure/Sub1/Rg1/AustraliaEast
